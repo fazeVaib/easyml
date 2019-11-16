@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Machine learning</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .card {
+        padding: 1pc !important;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <form action="/action_page.php" class="card">
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Upload CSV File</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <hr />
+            <div class="form-check col-md-1">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">F1
+                </label>
+            </div>
+            <div class="form-check col-md-1">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">F2
+                </label>
+            </div>
+            <div class="form-check col-md-1">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">F2
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">T1
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">T1
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">T2
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="" disabled>T3
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">Select Ai Models</label>
+                <select class="form-control" id="sel1">
+                    <option value="0"> Please select a category</option>
+                    <option id="reg" value="1">Regression</option>Regression
+                    <option id="class" value="2">Classification</option>
+                </select>
+            </div>
+            <div class="form-group form-check" id="showrerg" style="display:none">
+                <label class="form-check-label">Models</label>
+                <select class="form-control" id="sel1">
+                    <option value="0"> Please select a category</option>
+                    <option value="1">Linear Regression</option>
+                    <option value="2">Polynomial Regression</option>
+                    <option value="2">SVM Regression</option>
+                    <option value="2">Decision Regression</option>
+                    <option value="2">Random Forest Regression</option>
+                </select>
+            </div>
+            <div class="form-group form-check" id="showclass" style="display:none">
+                <label class="form-check-label">Models</label>
+                <select class="form-control" id="sel1">
+                    <option value="0"> Please select a category</option>
+                    <option value="1">Logistic Regression</option>
+                    <option value="2">KNN</option>
+                    <option value="2">SVM</option>
+                    <option value="2">Naive Bayes</option>
+                    <option value="2">Desion Tree Classification</option>
+                    <option value="2">Random Forest Classification</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+    $("#reg").click(function () {
+        $("#showrerg").show();
+        $("#showclass").hide();
+    });
+
+    $("#class").click(function () {
+        $("#showrerg").hide();
+        $("#showclass").show();
+    });
+
+</script>

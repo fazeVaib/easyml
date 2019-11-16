@@ -12,8 +12,12 @@ def return_xlabels(cfile, features):
     t = []
     for item in features: 
         t.append(df[item].values)
-    return t
-
+    
+    p = []
+    for i in range(len(t[0])): 
+        p.append([ele[i] for ele in t])
+    
+    return p
 
 def return_ylabels(cfile, ycol):
     df = pd.read_csv(cfile)
